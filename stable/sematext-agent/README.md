@@ -41,7 +41,8 @@ The following table lists the configuration parameters of the `sematext-agent` c
 |             Parameter            |            Description            |                  Default                  |
 |----------------------------------|-----------------------------------|-------------------------------------------|
 | `containerToken`                 | Sematext Container token          | `Nil` Provide your Container token        |
-| `logsToken`                      | Sematext Logs token               | `Nil` Provide your Logs token          |
+| `logsToken`                      | Sematext Logs token               | `Nil` Provide your Logs token             |
+| `infraToken`                     | Sematext Infra token              | `Nil` Provide your Infra token            |
 | `region`                         | Sematext region                   | `US` Sematext US or EU region             |
 | `agent.image.repository`         | The image repository              | `sematext/agent`                          |
 | `agent.image.tag`                | The image tag                     | `latest`                                  |
@@ -53,15 +54,16 @@ The following table lists the configuration parameters of the `sematext-agent` c
 | `logagent.image.tag`             | The image tag                     | `latest`                                  |
 | `logagent.image.pullPolicy`      | Image pull policy                 | `Always`                                  |
 | `logagent.resources`             | Logagent resources                | `{}`                                      |
+| `logagent.customConfigs`         | Logagent custom configs           | `[]` Check `values.yaml`                  |
 | `logagent.extraHostVolumeMounts` | Extra mounts                      | `{}`                                      |
-| `customUrl.serverBaseUrl`        | Custom Base URL                   | `Nil`                                     |
-| `customUrl.logsReceiverUrl`      | Custom Logs receiver URL          | `Nil`                                     |
-| `customUrl.eventsRecieverUrl`    | Custom Event receiver URL         | `Nil`                                     |
 | `serviceAccount.create`          | Create a service account          | `true`                                    |
 | `serviceAccount.name`            | Service account name              | `Nil` Defaults to chart name              |
 | `rbac.create`                    | RBAC enabled                      | `true`                                    |
 | `tolerations`                    | Tolerations                       | `[]`                                      |
 | `nodeSelector`                   | Node selector                     | `{}`                                      |
+| `serverBaseUrl`                  | Custom Base URL                   | `Nil`                                     |
+| `logsReceiverUrl`                | Custom Logs receiver URL          | `Nil`                                     |
+| `eventsReceiverUrl`              | Custom Event receiver URL         | `Nil`                                     |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example:
 
