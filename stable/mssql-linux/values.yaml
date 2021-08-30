@@ -12,8 +12,8 @@ agent:
 existingSecret: ""
 existingSecretKey: sapassword
 image:
-  repository: microsoft/mssql-server-linux
-  tag: 2017-CU5
+  repository: mcr.microsoft.com/mssql/server
+  tag: 2017-CU5-ubuntu
   pullPolicy: IfNotPresent
   ## It is possible to specify docker registry credentials
   ## See https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
